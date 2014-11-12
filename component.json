@@ -12,7 +12,10 @@
     "ksanaforge/checkbrowser": "*",
     "ksanaforge/htmlfs": "*",
     "ccs1/main": "*",
-    "ccs1/comp1": "*"
+    "ccs1/comp1": "*",
+    "ccs1/inputs": "*",
+    "ccs1/dataset": "*",
+    "ccs1/api": "*"
   },
   "development": {},
   "paths": [
