@@ -1,7 +1,9 @@
-//var othercomponent=Require("other"); 
-//new module filename must be added to scripts section of ./component.js and export here
-var dataset = {
- module1: require("./module1")
+var dataset={
+  collnames:require("./collnames"),
+  authors:require("./authors"),
+  collinfos:require("./collinfos"),
+  collections:require("./collections"),
+  titlenames:require("./titlenames"),
+  titlecoll:require("./titlecoll")
 }
-
 module.exports=dataset;

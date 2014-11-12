@@ -3,11 +3,15 @@ if (typeof process!="undefined") {
 } else {
 	var dataset=Require("dataset");
 }
+var digits=function(){
+  
+}
 var searchStrings=function( pat, strings) {
   var res=[];
   for (var i=0;i<strings.length;i++) {
     var m=strings[i].match(pat);
-    if (m) res.push(i);
+    if (m)
+      m=m[0],res.push(i.toString(32)+' '+strings[i].replace(m,'<b>'+m+'</b>'));
   }
   return res;
 }

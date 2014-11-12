@@ -1,13 +1,13 @@
 {
   "name": "api",
-  "repo": "ccs1/api",
-  "description": "non visual module",
+  "repo": "ccs/api",
+  "description": "hello world",
   "version": "0.0.1",
   "keywords": [],
   "dependencies": {},
   "development": {},
   "license": "MIT",
   "main": "index.js",
-  "scripts": ["index.js","module1.js"],
-  "styles": []
+  "scripts": ["index.js","search.js"],
+  "styles": ["index.css"]
 }
