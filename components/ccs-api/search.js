@@ -74,23 +74,28 @@ var findTitleByAuthor=function(author) {
   };
   return res;
 }
-var findAuthor=function(author) {
+var findAuthor=function(author,max) {
+  max=max||0;
 	if (!author.trim()) return [];
 	var pat=new RegExp(author);
-	return searchStrings(pat,dataset.authors);
+  var res=searchStrings(pat,dataset.authors);
+  if(max&&res.length>max) res.length=max;)
+	return res;
 }
-var findTitle=function(title) {
+var findTitle=function(title,max) {
+  max=max||100;
   if (!title.trim()) return [];
   var pat=new RegExp(title);
   var res=searchStrings(pat,dataset.titlenames); 
-  if (res.length>100) res.length=100;
+  if(max&&res.length>max) res.length=max;)
   return res;
 }
-var findCollection=function(coll) {
+var findCollection=function(coll,max) {
+  max=max||50;
   if (!coll.trim()) return [];
   var pat=new RegExp(coll);
-  var res=searchStrings(pat,dataset.collnames); 
-  if (res.length>50) res.length=50;
+  var res=searchStrings(pat,dataset.collnames);
+  if(max&&res.length>max) res.length=max;)
   return res;
 }
 module.exports={

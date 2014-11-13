@@ -14,6 +14,14 @@ var inputs = React.createClass({
     //bind context must be null to get rid of warning message
     this.timer=setTimeout( this.props.onChange.bind(null,tofind),300);
   },
+  onkeydown:function(e) {
+    var tofind=this.refs.tofind.getDOMNode().value;
+    if (e&&e.key=="Enter")
+      this.props.onChange(tofind);
+  },
+  componentDidMount:function() {
+    this.oninput();
+  },
   render: function() {
     return (
       <div>
