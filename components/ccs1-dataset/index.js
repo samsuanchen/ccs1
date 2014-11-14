@@ -2,7 +2,7 @@ var dataset={
   collnames:require("./collnames"),
   authors:require("./authors"),
   collinfos:require("./collinfos"),
-  collections:require("./collections"),
+  authorcoll:require("./authorcoll"),
   titlenames:require("./titlenames"),
   titlecoll:require("./titlecoll")
 }

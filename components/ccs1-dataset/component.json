@@ -8,7 +8,7 @@
   "development": {},
   "license": "MIT",
   "main": "index.js",
-  "scripts": ["index.js","authors.js","titlenames.js",
-    "collinfos.js","collnames.js","collections.js","titlecoll.js"],
+  "scripts": ["index.js","collnames.js","titlenames.js","authors.js",
+    "collinfos.js","titlecoll.js","authorcoll.js"],
   "styles": []
 }

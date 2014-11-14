@@ -63,7 +63,7 @@ var findTitleByAuthor=function(author) {
 	  authorid=-(authorid+1);		
 	}
   var res=[];
-  for (var i=0;i<dataset.collections.length;i++){
+  for (var i=0;i<dataset.collections.length;i++){ // no more dataset.collections but dataset.collinfos 20141114 sam
     var D=dataset.collections[i];
     var at=D.indexOf(authorid);
     if (at==-1) continue;

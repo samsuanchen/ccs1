@@ -1,18 +1,12 @@
 /** @jsx React.DOM */
-/*
-var bootstrap=Require("bootstrap");
-var titles=Require("titles");
-var authors=Require("authors");
-var collections=Require("collections");
-var titleList=Require("titlelist");
-var collectionlist=Require("collectionlist");
-*/
-var inputs=Require("inputs");
-var  colllist=Require( "colllist");
-var titlelist=Require("titlelist");
-var dataset=Require("dataset");
-var api=Require("api");
-var lib=Require("lib");
+//var bootstrap=Require("bootstrap");
+var     inputs=Require(    "inputs");
+var   colllist=Require(  "colllist");
+var  titlelist=Require( "titlelist");
+var authorlist=Require("authorlist");
+var    dataset=Require(   "dataset");
+var        api=Require(       "api");
+var        lib=Require(       "lib");
 /* to rename the component, change name of ./component.js and  "dependencies" section of ../../component.js */
 
 //var othercomponent=Require("other");
@@ -20,9 +14,9 @@ var lib=Require("lib");
 var main = React.createClass({
   getInitialState: function() {
     return {
-      colls  :[], coToFind:'', coToFindMax: 50, collInfo:'',
-      titles :[], tiToFind:'', tiToFindMax:100,
-      authors:[], auToFind:'', auToFindMax:  0};
+      colls  :[], coToFind:'', coToFindMax:50, collInfo:'',
+      titles :[], tiToFind:'', tiToFindMax:50,
+      authors:[], auToFind:'', auToFindMax:50};
   },
   findCollsAndTitles:function(tofind) {
     this.findColls (tofind);
@@ -40,24 +34,23 @@ var main = React.createClass({
     var authors=api.search.findAuthor   (tofind,this.state.auToFindMax);
     this.setState({authors:authors,auToFind:tofind});
   },
-  setColl:function(coIndex){
-    this.setState({collInfo:dataset.collinfos[coIndex]});
+  setColl:function(i){
+    this.coIndex=i;
+    this.setState({collInfo:dataset.collinfos[i]});
   },
   showCollInfo:function(){
-    var c=this.state.collInfo;
+    var c=this.state.collInfo, i, coIndex=this.coIndex;
     if(!c){
       if(this.state.colls.length)
-        c=dataset.collinfos[this.state.colls[0]];
-      else if(this.state.titles.length) {
-        var t=this.state.titles[0];
-        c=dataset.titlecoll[t];
-        if(typeof c!=='number') c=c[0];
-        c=dataset.collinfos[c];
-      } else return;
+        this.coIndex=i=this.state.colls[0];
+      else if(this.state.titles.length)
+        i=this.state.titles[0], this.coIndex=i=dataset.titlecoll[i][0];
+      else return;
+      coIndex=i, c=dataset.collinfos[i];
     }
-    var fc=this.state.coToFind,ft=this.state.tiToFind,fa=this.state.auToFind;
+    var fc=this.state.coToFind, ft=this.state.tiToFind, fa=this.state.auToFind;
     c=c.replace(/(<coll.*?>)(.+?)(<\/coll>)/,function(m,m1,m2,m3){
-      return ' '+m1+m2.replace(fc,'<xc>'+fc+'</xc>')+m3;
+      return ' <a>'+lib.digits(coIndex,3,32)+'</a> '+m1+m2.replace(fc,'<xc>'+fc+'</xc>')+m3;
     });
     c=c.replace(/(<ti.*?>)(.+?)(<\/ti>)/g,function(m,m1,m2,m3){
       return     m1+m2.replace(ft,'<xt>'+ft+'</xt>')+m3+' ';
@@ -87,9 +80,12 @@ var main = React.createClass({
     var coCount=this.state.colls  .length;
     var tiCount=this.state.titles .length;
     var auCount=this.state.authors.length;
-    if(this.state.coToFindMax&&coCount===this.state.coToFindMax)coCount='<b>至少'+coCount+'</b>';
-    if(this.state.tiToFindMax&&tiCount===this.state.tiToFindMax)tiCount='<b>至少'+tiCount+'</b>';
-    if(this.state.auToFindMax&&auCount===this.state.auToFindMax)auCount='<b>至少'+auCount+'</b>';
+    if(this.state.coToFindMax&&coCount===this.state.coToFindMax)
+      coCount='<b>至少'+coCount+'</b>';
+    if(this.state.tiToFindMax&&tiCount===this.state.tiToFindMax)
+      tiCount='<b>至少'+tiCount+'</b>';
+    if(this.state.auToFindMax&&auCount===this.state.auToFindMax)
+      auCount='<b>至少'+auCount+'</b>';
     return (
       <div>
         <div className="col-md-4">
@@ -119,7 +115,11 @@ var main = React.createClass({
             size="30"/>
           人名:&nbsp;
           <span dangerouslySetInnerHTML={{__html: auCount}} />
-          <pre  dangerouslySetInnerHTML={{__html: this.showAuthors()}} />
+          <pre>
+            <authorlist
+              authors={this.state.authors} onCollChanged={this.setColl}
+              tofind={this.state.auToFind} />
+          </pre>
         </div>
       </div>
     );

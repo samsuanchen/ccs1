@@ -18,7 +18,8 @@
     "ccs1/api": "*",
     "ccs1/lib": "*",
     "ccs1/colllist": "*",
-    "ccs1/titlelist": "*"
+    "ccs1/titlelist": "*",
+    "ccs1/authorlist": "*"
   },
   "development": {},
   "paths": [
