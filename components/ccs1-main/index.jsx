@@ -50,20 +50,20 @@ var main = React.createClass({
     }
     var fc=this.state.coToFind, ft=this.state.tiToFind, fa=this.state.auToFind;
     c=c.replace(/(<coll.*?>)(.+?)(<\/coll>)/,function(m,m1,m2,m3){
-      return ' <a>'+lib.digit32(coIndex,3)+'</a> '+m1+m2.replace(fc,'<xc>'+fc+'</xc>')+m3;
+      return ' <a>'+lib.digit36(coIndex,3)+'</a> '+m1+m2.replace(fc,'<xc>'+fc+'</xc>')+m3;
     });
     c=c.replace(/(<ti.*?>)(.+?)(<\/ti>)/g,function(m,m1,m2,m3){
       return     m1+m2.replace(ft,'<xt>'+ft+'</xt>')+m3+' ';
     });
     c=c.replace(/(<pr.*?>)(.+?)(<\/pr>)/g,function(m,m1,m2,m3){
-      return     m1+m2.replace(fa,'<xa>'+fa+'</xa>')+m3+' ';
+      return ' '+m1+m2.replace(fa,'<xa>'+fa+'</xa>')+m3+' ';
     });
     return c;
   },
   showTitles:function(){
     var tiToFind=this.state.tiToFind;
     return this.state.titles.map(function(t){
-      var i=lib.digit32(t,4), n=dataset.titlenames[t];
+      var i=lib.digit36(t,4), n=dataset.titlenames[t];
       n=n.replace(tiToFind,'<xt>'+tiToFind+'</xt>')
       return i+' '+n
     }).join(',\n');
@@ -71,7 +71,7 @@ var main = React.createClass({
   showAuthors:function(){
     var auToFind=this.state.auToFind;
     return this.state.authors.map(function(a){
-      var i=lib.digit32(a,3), n=dataset.authors[a];
+      var i=lib.digit36(a,3), n=dataset.authors[a];
       n=n.replace(auToFind,'<xa>'+auToFind+'</xa>')
       return i+' '+n
     }).join(',\n');
