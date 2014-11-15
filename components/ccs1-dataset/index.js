@@ -1,9 +1,9 @@
 var dataset={
-  collnames:require("./collnames"),
-  authors:require("./authors"),
-  collinfos:require("./collinfos"),
-  authorcoll:require("./authorcoll"),
+  collnames :require("./collnames" ),
+  collinfos :require("./collinfos" ),
   titlenames:require("./titlenames"),
-  titlecoll:require("./titlecoll")
+  titlecoll :require("./titlecoll" ),
+  authors   :require("./authors"   ),
+  authorcoll:require("./authorcoll")
 }
 module.exports=dataset;

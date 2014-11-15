@@ -10,6 +10,7 @@ var authorlist = React.createClass({
     authorname=authorname.replace(RegExp(tofind),function(m){
       return '<xa>'+m+'</xa>'
     });
+    authorname='<pr>'+authorname+'</pr>';
     var colls=dataset.authorcoll[auIndex];
     if(typeof colls==='number') colls=[colls];
     return <div>

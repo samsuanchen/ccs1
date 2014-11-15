@@ -1,0 +1,13 @@
+<!--<html><head>-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src='components/ccs1-dataset/files.js'></script>
+<pre>
+</pre>
+<script>
+  var pre=document.getElementsByTagName('pre')[0];
+  txt.map(function(t,i){
+    var n=t.indexOf(' '), f=t.substr(0,n);
+    if(pre.innerHTML)pre.innerHTML+='\n';
+    pre.innerHTML+=(i<10?'0':'')+i+' '+f
+  });
+</script>
