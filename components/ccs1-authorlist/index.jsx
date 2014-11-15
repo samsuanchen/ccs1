@@ -3,7 +3,7 @@ var dataset=Require("dataset");
 var lib=Require("lib");
 var authorlist = React.createClass({
   renderColl :function(coIndex) {
-    return <span>&nbsp;<a data-coIndex={coIndex}>{lib.digits(coIndex,3,32)}</a></span>
+    return <span>&nbsp;<a data-coIndex={coIndex}>{lib.digit32(coIndex,3)}</a></span>
   },
   renderAuthor:function(auIndex) {
     var authorname=dataset.authors[auIndex], tofind=this.props.tofind;

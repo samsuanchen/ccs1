@@ -8,7 +8,7 @@ var  colllist = React.createClass({
       return '<xc>'+m+'</xc>'
     });
     return <div>
-        <a data-coIndex={coIndex}>{lib.digits(coIndex,3,32)}</a>&nbsp;
+        <a data-coIndex={coIndex}>{lib.digit32(coIndex,3)}</a>&nbsp;
         <span dangerouslySetInnerHTML={{__html:  collname}} />
       </div>
   },
