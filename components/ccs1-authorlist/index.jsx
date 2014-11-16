@@ -1,4 +1,5 @@
 /** @jsx React.DOM */
+var numberBase=36;
 var dataset=Require("dataset");
 var lib=Require("lib");
 var authorlist = React.createClass({
@@ -19,7 +20,7 @@ var authorlist = React.createClass({
       </div>
   },
   setColl:function(e) {
-    this.props.onCollChanged(parseInt(e.target.innerText,32));
+    this.props.onCollChanged(parseInt(e.target.innerText,numberBase));
   },
   render: function() {
     return (

@@ -1,4 +1,5 @@
 /** @jsx React.DOM */
+var numberBase=36;
 var dataset=Require("dataset");
 var lib=Require("lib");
 var  colllist = React.createClass({
@@ -13,8 +14,8 @@ var  colllist = React.createClass({
         <span dangerouslySetInnerHTML={{__html:  collname}} />
       </div>
   },
-  setColl :function(e) {
-    this.props. onCollChanged(parseInt(e.target.innerText,32));
+  setColl:function(e) {
+    this.props. onCollChanged(parseInt(e.target.innerText,numberBase));
   },
   render:function() {
     return <div onClick={this.setColl }>{this.props. colls.map(this.renderItem)}</div>

@@ -49,8 +49,11 @@ var main = React.createClass({
       coIndex=i, c=dataset.collinfos[i];
     }
     var fc=this.state.coToFind, ft=this.state.tiToFind, fa=this.state.auToFind;
+    $('a.selected').removeClass('selected');
+    var A=$('a'), x=lib.digit36(coIndex,3), i;
+    for(i=0;i<A.length;i++)if(A[i].innerText===x)A[i].className='selected';
     c=c.replace(/(<coll.*?>)(.+?)(<\/coll>)/,function(m,m1,m2,m3){
-      return ' <a>'+lib.digit36(coIndex,3)+'</a> '+m1+m2.replace(fc,'<xc>'+fc+'</xc>')+m3;
+      return ' <a class="selected">'+x+'</a> '+m1+m2.replace(fc,'<xc>'+fc+'</xc>')+m3;
     });
     c=c.replace(/(<ti.*?>)(.+?)(<\/ti>)/g,function(m,m1,m2,m3){
       return     m1+m2.replace(ft,'<xt>'+ft+'</xt>')+m3+' ';
@@ -82,24 +85,25 @@ var main = React.createClass({
     var auCount=this.state.authors.length;
     if(this.state.coToFindMax&&coCount===this.state.coToFindMax)
       coCount='<b>至少'+coCount+'</b>';
+    var coFound='叢書名 含 <coll>'+this.state.coToFind+'</coll> '+coCount;
     if(this.state.tiToFindMax&&tiCount===this.state.tiToFindMax)
       tiCount='<b>至少'+tiCount+'</b>';
+    var tiFound='書目名 含 <ti>  '+this.state.tiToFind+'</ti> '  +tiCount;
     if(this.state.auToFindMax&&auCount===this.state.auToFindMax)
       auCount='<b>至少'+auCount+'</b>';
+    var auFound=  '人名 含 <pr>'  +this.state.auToFind+'</pr> '  +auCount;
     return (
       <div>
         <div className="col-md-4">
           <inputs def="農桑" placeholder="書名" onChange={this.findCollsAndTitles}
             size="30"/>
-          叢書:&nbsp;
-          <span dangerouslySetInnerHTML={{__html: coCount}} />
+          <span dangerouslySetInnerHTML={{__html: coFound}} />
           <pre>
             <colllist
               colls ={this.state.colls} onCollChanged={this.setColl}
               tofind={this.state.coToFind} />
           </pre>
-          書目:&nbsp;
-          <span dangerouslySetInnerHTML={{__html: tiCount}} />
+          <span dangerouslySetInnerHTML={{__html: tiFound}} />
           <pre>
             <titlelist
               titles={this.state.titles} onCollChanged={this.setColl}
@@ -113,8 +117,7 @@ var main = React.createClass({
         <div className="col-md-4">
           <inputs def="禎" placeholder="人名" onChange={this.findAuthors}
             size="30"/>
-          人名:&nbsp;
-          <span dangerouslySetInnerHTML={{__html: auCount}} />
+          <span dangerouslySetInnerHTML={{__html: auFound}} />
           <pre>
             <authorlist
               authors={this.state.authors} onCollChanged={this.setColl}
