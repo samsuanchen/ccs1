@@ -1,0 +1,125 @@
+g91;3xxx;
+　宋;2xxx;編　
+　　<ed>明嘉靖十五年（1536）鄭氏宗文堂刻本</ed>
+　總卷一
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;四卷　宋;2xxx;撰
+　　;1xxx;三卷
+　總卷二
+　　;1xxx;三卷　五代;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;二卷　漢;2xxx;撰
+　　;1xxx;二卷　唐;2xxx;撰
+　總卷三
+　　;1xxx;一卷　唐;2xxx;撰
+　　;1xxx;五卷　宋;2xxx;撰
+　　;1xxx;三卷　宋;2xxx;撰
+　總卷四
+　　;1xxx;二卷　題宋;2xxx;撰
+　　;1xxx;一卷
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷　唐;2xxx;撰
+　　;1xxx;一卷　唐;2xxx;撰
+　　;1xxx;三卷　宋;2xxx;撰
+　總卷五
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;二卷　題唐;2xxx;撰
+　　;1xxx;一卷;1xxx;一卷　唐;2xxx;撰
+　　;1xxx;二卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　總卷六
+　　;1xxx;三卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷
+　總卷七
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　總卷八
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷　唐;2xxx;撰
+　　;1xxx;三卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　總卷九
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;三卷　宋;2xxx;述　宋;2xxx;撰
+　總卷十
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;二卷　宋;2xxx;撰
+　　;1xxx;十卷　宋;2xxx;撰
+　總卷十一
+　　;1xxx;三卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;二卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷
+　總卷十二
+<pb n="92"/>
+　　;1xxx;四卷;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　總卷十三
+　　;1xxx;二卷　宋;2xxx;撰
+　　;1xxx;三卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;三卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　總卷十四
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷　題宋;2xxx;撰
+　　;1xxx;三卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　總卷十五
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰　
+　　;1xxx;三卷;1xxx;一卷　唐;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　總卷十六
+　　;1xxx;十卷　宋;2xxx;撰
+　　;1xxx;一卷　唐;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;二卷　宋;2xxx;撰
+　　;1xxx;二卷　宋;2xxx;撰
+　總卷十七
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷
+　　;1xxx;一卷;1xxx;一卷;1xxx;一卷
+　　;1xxx;二卷　宋;2xxx;撰
+　　;1xxx;一卷
+　　;1xxx;一卷　宋;2xxx;撰
+　總卷十八
+　　;1xxx;一卷　梁;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷　唐;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;二卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;三卷　唐;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　總卷十九
+　　;1xxx;三卷　宋;2xxx;撰
+　　;1xxx;一卷　題晉;2xxx;註
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;三卷　宋;2xxx;撰
+　　;1xxx;三卷　晉;2xxx;撰
+　總卷二十
+　　;1xxx;一卷　前蜀;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷　宋;2xxx;撰
+　　;1xxx;一卷　晉;2xxx;撰
+　　　<note>〔按〕</note>從現存資料看，《百川學海》為彙編叢書之祖。自宋以降，屢有刊刻、傳鈔。宋刻本因民國間武進陶氏影印，為人所熟知。明弘治十四年華珵刻本，編次與宋刻同，自甲至癸，分為十集。而此刻則編為二十卷，且多《酒經》、《酒譜》、《荔枝譜》三種，與明讀書坊所刊陳仁錫重輯本同（陳本少《前定録續一卷》）。僅見北京圖書館和北京大學圖書館有藏，北圖藏本有清吳焯抄補序目並跋、清翁斌孫跋。

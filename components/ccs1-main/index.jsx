@@ -1,12 +1,13 @@
 /** @jsx React.DOM */
 //var bootstrap=Require("bootstrap");
-var     inputs=Require(    "inputs");
-var   colllist=Require(  "colllist");
-var  titlelist=Require( "titlelist");
-var authorlist=Require("authorlist");
+var     Inputs=Require(    "inputs");
+var   Colllist=Require(  "colllist");
+var  Titlelist=Require( "titlelist");
+var Authorlist=Require("authorlist");
 var    dataset=Require(   "dataset");
 var        api=Require(       "api");
 var        lib=Require(       "lib");
+var      Swipe=Require(     "swipe");
 /* to rename the component, change name of ./component.js and  "dependencies" section of ../../component.js */
 
 //var othercomponent=Require("other");
@@ -79,6 +80,28 @@ var main = React.createClass({
       return i+' '+n
     }).join(',\n');
   },
+  onSwipeStart:function(target) {
+    console.log(target.innerHTML);
+  },
+  onSwipeEnd:function(target) {
+
+  },
+  onTransitionEnd:function(index,slide,target) {
+    console.log(index);
+  },
+  goSlide:function(e) {
+     var n=parseInt(e.target.dataset.n);
+     this.refs.Swipe.swipe.slide(n||0);
+  },
+  renderSlideButtons:function() {
+    if (ksana.platform!="ios" && ksana.platform!="android") {
+      return <div>
+          <button data-n="0" onClick={this.goSlide}>0</button>
+          <button data-n="1" onClick={this.goSlide}>1</button>
+          <button data-n="2" onClick={this.goSlide}>2</button>
+      </div>
+    }
+  },
   render: function() { 
     var coCount=this.state.colls  .length;
     var tiCount=this.state.titles .length;
@@ -94,36 +117,42 @@ var main = React.createClass({
     var auFound=  '人名 含 <pr>'  +this.state.auToFind+'</pr> '  +auCount;
     return (
       <div>
-        <div className="col-md-4">
-          <inputs def="農桑" placeholder="書名" onChange={this.findCollsAndTitles}
+           {this.renderSlideButtons()}
+         <Swipe ref="Swipe" continuous={true} 
+               transitionEnd={this.onTransitionEnd} 
+               swipeStart={this.onSwipeStart} swipeEnd={this.onSwipeEnd}>
+          <div>
+          <Inputs def="農桑" placeholder="書名" onChange={this.findCollsAndTitles}
             size="30"/>
           <span dangerouslySetInnerHTML={{__html: coFound}} />
           <pre>
-            <colllist
+            <Colllist
               colls ={this.state.colls} onCollChanged={this.setColl}
               tofind={this.state.coToFind} />
           </pre>
           <span dangerouslySetInnerHTML={{__html: tiFound}} />
           <pre>
-            <titlelist
+            <Titlelist
               titles={this.state.titles} onCollChanged={this.setColl}
               tofind={this.state.tiToFind} />
           </pre>
         </div>
-        <div className="col-md-4">ccs1<br/>
+        <div>ccs1<br/>
           <h2>　中國古籍　叢書目錄　檢索　</h2>
           <pre  dangerouslySetInnerHTML={{__html: this.showCollInfo()}} />
         </div>
-        <div className="col-md-4">
-          <inputs def="禎" placeholder="人名" onChange={this.findAuthors}
+
+        <div>
+          <Inputs def="禎" placeholder="人名" onChange={this.findAuthors}
             size="30"/>
           <span dangerouslySetInnerHTML={{__html: auFound}} />
           <pre>
-            <authorlist
+            <Authorlist
               authors={this.state.authors} onCollChanged={this.setColl}
               tofind={this.state.auToFind} />
           </pre>
         </div>
+      </Swipe>
       </div>
     );
   }

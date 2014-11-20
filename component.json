@@ -11,6 +11,7 @@
     "ksanaforge/fileinstaller": "*",
     "ksanaforge/checkbrowser": "*",
     "ksanaforge/htmlfs": "*",
+    "ksanaforge/swipe": "*",
     "ccs1/main": "*",
     "ccs1/comp1": "*",
     "ccs1/inputs": "*",
