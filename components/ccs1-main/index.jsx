@@ -116,43 +116,40 @@ var main = React.createClass({
       auCount='<b>至少'+auCount+'</b>';
     var auFound=  '人名 含 <pr>'  +this.state.auToFind+'</pr> '  +auCount;
     return (
-      <div>
-           {this.renderSlideButtons()}
-         <Swipe ref="Swipe" continuous={true} 
-               transitionEnd={this.onTransitionEnd} 
-               swipeStart={this.onSwipeStart} swipeEnd={this.onSwipeEnd}>
+      <div>{this.renderSlideButtons()}
+        <Swipe ref="Swipe" continuous={true} transitionEnd={this.onTransitionEnd} 
+          swipeStart={this.onSwipeStart} swipeEnd={this.onSwipeEnd}>
           <div>
-          <Inputs def="農桑" placeholder="書名" onChange={this.findCollsAndTitles}
-            size="30"/>
-          <span dangerouslySetInnerHTML={{__html: coFound}} />
-          <pre>
-            <Colllist
-              colls ={this.state.colls} onCollChanged={this.setColl}
-              tofind={this.state.coToFind} />
-          </pre>
-          <span dangerouslySetInnerHTML={{__html: tiFound}} />
-          <pre>
-            <Titlelist
-              titles={this.state.titles} onCollChanged={this.setColl}
-              tofind={this.state.tiToFind} />
-          </pre>
-        </div>
-        <div>ccs1<br/>
-          <h2>　中國古籍　叢書目錄　檢索　</h2>
-          <pre  dangerouslySetInnerHTML={{__html: this.showCollInfo()}} />
-        </div>
-
-        <div>
-          <Inputs def="禎" placeholder="人名" onChange={this.findAuthors}
-            size="30"/>
-          <span dangerouslySetInnerHTML={{__html: auFound}} />
-          <pre>
-            <Authorlist
-              authors={this.state.authors} onCollChanged={this.setColl}
-              tofind={this.state.auToFind} />
-          </pre>
-        </div>
-      </Swipe>
+            <Inputs def="農桑" placeholder="書名" onChange={this.findCollsAndTitles}
+              size="30"/>
+            <span dangerouslySetInnerHTML={{__html: coFound}} />
+            <pre>
+              <Colllist
+                colls ={this.state.colls} onCollChanged={this.setColl}
+                tofind={this.state.coToFind} />
+            </pre>
+            <span dangerouslySetInnerHTML={{__html: tiFound}} />
+            <pre>
+              <Titlelist
+                titles={this.state.titles} onCollChanged={this.setColl}
+                tofind={this.state.tiToFind} />
+            </pre>
+          </div>
+          <div>ccs1<br/>
+            <h2>　中國古籍　叢書目錄　檢索　</h2>
+            <pre  dangerouslySetInnerHTML={{__html: this.showCollInfo()}} />
+          </div>
+          <div>
+            <Inputs def="禎" placeholder="人名" onChange={this.findAuthors}
+              size="30"/>
+            <span dangerouslySetInnerHTML={{__html: auFound}} />
+            <pre>
+              <Authorlist
+                authors={this.state.authors} onCollChanged={this.setColl}
+                tofind={this.state.auToFind} />
+            </pre>
+          </div>
+        </Swipe>
       </div>
     );
   }
